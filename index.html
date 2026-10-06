@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Study With 엔하이픈(ENHYPEN)</title>
+<style>
+:root{
+  --bg:#e9f0f8; --paper:#ffffff; --ink:#0f1630; --sub:#4a5577; --navy:#101a3d; --onnavy:#ffffff; --peri:#7f8fd6; --accent:#3446b4; --line:#d3deee;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){--bg:#0a0f22;--paper:#121a38;--ink:#f1f4fc;--sub:#b3bddd;--navy:#e8eeff;--onnavy:#0a1026;--peri:#9aa9ee;--accent:#b4c0ff;--line:#263062}
+}
+:root[data-theme="dark"]{--bg:#0a0f22;--paper:#121a38;--ink:#f1f4fc;--sub:#b3bddd;--navy:#e8eeff;--onnavy:#0a1026;--peri:#9aa9ee;--accent:#b4c0ff;--line:#263062}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:"Pretendard","Noto Sans KR","Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+  font-size:16px;line-height:1.8;word-break:keep-all;-webkit-text-size-adjust:100%;overflow-x:hidden}
+main{max-width:560px;margin:0 auto;padding:18px 18px 72px}
+.poster{position:relative;height:390px;border-radius:20px;overflow:hidden;color:#fff;
+  background:radial-gradient(120% 80% at 90% 0%,#6f84d8 0%,transparent 55%),linear-gradient(165deg,#0b1230 0%,#16236a 65%,#2b3f9a 100%)}
+.poster::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(0deg,rgba(255,255,255,.06) 0 1px,transparent 1px 30px)}
+.v{position:absolute;bottom:14px;writing-mode:vertical-rl;transform:rotate(180deg);font-family:"Arial Black","Helvetica Neue",Impact,sans-serif;font-size:38px;line-height:1;font-weight:900;letter-spacing:-.01em;white-space:nowrap}
+.v1{left:14px}.v2{left:58px;color:#c9d3ff}
+.mini{position:absolute;left:16px;top:18px;font-size:13px;font-weight:800;letter-spacing:.04em;color:#fff;background:rgba(255,255,255,.14);padding:5px 10px;border-radius:999px}
+.scene{position:absolute;right:12px;top:44px;width:222px;height:auto}
+.dots{position:absolute;right:20px;bottom:50px;display:flex;gap:6px}
+.dots i{width:9px;height:9px;border-radius:50%;background:#fff;display:block}
+.name{position:absolute;right:20px;bottom:14px;font-family:"Arial Black","Helvetica Neue",Impact,sans-serif;font-size:22px;font-weight:900}
+.band{margin:18px -18px 0;background:var(--navy);color:var(--onnavy);overflow:hidden;white-space:nowrap;font-weight:700;font-size:12.5px;letter-spacing:.22em;padding:8px 0}
+.band div{display:inline-block;animation:run 18s linear infinite}
+.band span{padding:0 20px}
+@keyframes run{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.band div{animation:none}}
+h1{margin:44px 0 0;white-space:nowrap;font-size:clamp(16px,5.2vw,28px);font-weight:800;letter-spacing:-.02em;line-height:1.35}
+.bar{width:36px;height:3px;background:var(--accent);margin:16px 0 20px}
+.line{margin:0;font-size:17px;line-height:1.85;font-weight:600}
+mark{background:linear-gradient(transparent 62%,rgba(127,143,214,.5) 62%);color:inherit;font-weight:700;padding:0 1px}
+.sec{display:flex;align-items:center;gap:14px;margin:60px 0 20px;font-size:12px;letter-spacing:.3em;font-weight:700;color:var(--sub)}
+.sec::after{content:"";flex:1;height:1px;background:var(--line)}
+.steps{counter-reset:s;display:grid;gap:10px}
+.steps div{counter-increment:s;display:flex;align-items:center;gap:14px;background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:15px 16px;font-weight:700;font-size:16px;line-height:1.5}
+.steps div::before{content:counter(s);flex:none;width:26px;height:26px;border-radius:50%;display:grid;place-items:center;background:var(--navy);color:var(--onnavy);font-weight:800;font-size:13px}
+.steps div:nth-child(4){background:var(--navy);color:var(--onnavy);border-color:var(--navy)}
+.steps div:nth-child(4)::before{background:var(--onnavy);color:var(--navy)}
+.steps small{font-weight:500;font-size:14px;color:var(--sub);margin-left:4px}
+.biz{display:grid;gap:10px}
+.biz div{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:16px 18px;font-size:15.5px;line-height:1.75}
+.biz b{display:block;color:var(--accent);font-size:13px;letter-spacing:.12em;font-weight:800;margin-bottom:2px}
+ol{list-style:none;margin:0;padding:0;display:grid;gap:14px}
+li{display:flex;gap:16px;align-items:flex-start;background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:20px 18px}
+li .ic{flex:none;width:46px;height:46px}
+.ic .bg{fill:var(--navy)}
+.ic .st{fill:none;stroke:var(--onnavy);stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+.ic .fl{fill:var(--peri)}
+.ic text{fill:var(--onnavy);font-weight:900;font-size:15px}
+li b.t{display:block;font-size:17px;font-weight:800;color:var(--accent);line-height:1.4;margin-bottom:4px}
+li p{margin:0;font-size:15.5px;line-height:1.85;font-weight:400}
+
+</style>
+</head>
+<body>
+<main>
+  <section class="poster" aria-hidden="true">
+    <div class="v v1">STUDY WITH</div>
+    <div class="v v2">ENHYPEN</div>
+    <div class="mini">1인 부스 스터디룸</div>
+    <svg class="scene" viewBox="0 0 230 300" xmlns="http://www.w3.org/2000/svg" font-family="Pretendard,'Noto Sans KR','Apple SD Gothic Neo','Malgun Gothic',sans-serif" font-weight="800">
+      <polygon points="0,20 18,36 18,260 0,280" fill="#8fa1e0"/>
+      <polygon points="230,20 212,36 212,260 230,280" fill="#7184d0"/>
+      <rect x="18" y="36" width="194" height="224" fill="#dbe4f7"/>
+      <g transform="rotate(-5 60 70)"><rect x="28" y="52" width="70" height="40" fill="#fff"/><text x="63" y="77" font-size="14" text-anchor="middle" fill="#101a3d">시험기간</text></g>
+      <circle cx="160" cy="76" r="26" fill="#fff" stroke="#101a3d" stroke-width="4"/>
+      <path d="M160 76V58M160 76L172 82" stroke="#101a3d" stroke-width="3" stroke-linecap="round"/>
+      <polygon points="18,236 212,236 230,276 0,276" fill="#f3f7ff"/>
+      <rect x="0" y="276" width="230" height="18" fill="#101a3d"/>
+      <polygon points="152,172 172,172 214,250 118,250" fill="#fff" opacity=".28"/>
+      <circle cx="58" cy="222" r="36" fill="#c9d3ff" opacity=".6"/>
+      <rect x="22" y="212" width="6" height="16" fill="#3f54c0"/><rect x="88" y="212" width="6" height="16" fill="#3f54c0"/>
+      <rect x="26" y="206" width="64" height="32" rx="10" fill="#101a3d"/>
+      <rect x="32" y="212" width="52" height="14" rx="7" fill="#9fb2ff"/>
+      <polygon points="80,244 138,240 140,266 76,270" fill="#fff" stroke="#7f8fd6" stroke-width="2"/>
+      <polygon points="140,240 198,244 204,270 140,266" fill="#fff" stroke="#7f8fd6" stroke-width="2"/>
+      <path d="M86 252L132 249M85 258L133 255M147 249L192 252M147 255L194 259" stroke="#aebde8" stroke-width="2"/>
+      <path d="M118 256L176 232" stroke="#3f54c0" stroke-width="5" stroke-linecap="round"/>
+      <ellipse cx="196" cy="238" rx="14" ry="4" fill="#101a3d"/>
+      <path d="M196 236L190 190L160 160" stroke="#101a3d" stroke-width="4" fill="none" stroke-linecap="round"/>
+      <polygon points="146,150 176,150 168,172 154,176" fill="#101a3d"/>
+      <g font-size="14" text-anchor="middle">
+        <rect x="96" y="196" width="26" height="26" fill="#fff"/><text x="109" y="215" fill="#101a3d" font-size="16">1</text>
+        <rect x="122" y="196" width="56" height="26" fill="#101a3d"/><text x="150" y="214" fill="#fff">공부</text>
+        <rect x="132" y="108" width="26" height="26" fill="#fff"/><text x="145" y="127" fill="#101a3d" font-size="16">2</text>
+        <rect x="158" y="108" width="50" height="26" fill="#101a3d"/><text x="183" y="126" fill="#fff">완주</text>
+        <rect x="22" y="158" width="26" height="26" fill="#fff"/><text x="35" y="177" fill="#101a3d" font-size="16">3</text>
+        <rect x="48" y="158" width="72" height="26" fill="#101a3d"/><text x="84" y="176" fill="#fff">VR 공연</text>
+      </g>
+    </svg>
+    <div class="dots"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    <div class="name">ENHYPEN</div>
+  </section>
+  <div class="band" aria-hidden="true"><div><span>STUDY WITH ENHYPEN ✦</span><span>공부 끝! VR 공연 시작 ✦</span><span>STUDY WITH ENHYPEN ✦</span><span>공부 끝! VR 공연 시작 ✦</span><span>STUDY WITH ENHYPEN ✦</span><span>공부 끝! VR 공연 시작 ✦</span><span>STUDY WITH ENHYPEN ✦</span><span>공부 끝! VR 공연 시작 ✦</span></div></div>
+
+  <h1>Study With 엔하이픈(ENHYPEN)</h1>
+  <div class="bar"></div>
+  <p class="line">시험기간에 공부와 덕질 중 하나를 포기해야 하는 팬이, 공부를 마치면 <mark>한정 VR 공연</mark>을 보는 <mark>1인 부스 스터디룸</mark></p>
+
+  <p class="sec">근거</p>
+  <ol>
+    <li><svg class="ic" viewBox="0 0 64 64" aria-hidden="true"><circle class="bg" cx="32" cy="32" r="32"/><path class="st" d="M14 18H50A4 4 0 0 1 54 22V38A4 4 0 0 1 50 42H34L24 50V42H14A4 4 0 0 1 10 38V22A4 4 0 0 1 14 18Z"/><path class="fl" d="M32 36C24 30 22 26 25 24C28 22 31 24 32 26C33 24 36 22 39 24C42 26 40 30 32 36Z"/></svg><div><b class="t">팬의 말</b><p>엔하이픈이 스터디캠프를 열어 공부를 감시해 줬으면 좋겠다는 말에서 <mark>공부와 덕질을 함께 원하는 마음</mark>을 확인했다.</p></div></li>
+    <li><svg class="ic" viewBox="0 0 64 64" aria-hidden="true"><circle class="bg" cx="32" cy="32" r="32"/><rect class="st" x="12" y="26" width="40" height="20" rx="8"/><circle class="fl" cx="24" cy="36" r="3.5"/><circle class="fl" cx="40" cy="36" r="3.5"/><path class="st" d="M12 32H8M52 32H56"/><polygon class="fl" points="46,8 48.5,13.5 54,14 50,18 51,24 46,21 41,24 42,18 38,14 43.5,13.5"/></svg><div><b class="t">3만 명 · 9.9</b><p>엔하이픈 VR 콘서트는 <mark>관객 3만 명</mark>, <mark>실관람 평점 9.9</mark>. VR 공연을 보려는 팬이 있다.</p></div></li>
+    <li><svg class="ic" viewBox="0 0 64 64" aria-hidden="true"><circle class="bg" cx="32" cy="32" r="32"/><path class="st" d="M10 22H54V28A4 4 0 0 0 54 36V42H10V36A4 4 0 0 0 10 28Z"/><path class="st" d="M42 22V42" stroke-dasharray="3 4"/><text x="26" y="37" text-anchor="middle">₩</text></svg><div><b class="t">36,000원</b><p>비슷한 VR 콘서트 티켓이 <mark>롯데시네마 36,000원</mark>. 이용권 가격의 참고 기준으로 삼았다.</p></div></li>
+  </ol>
+
+  <p class="sec">경험 흐름</p>
+  <div class="steps">
+    <div>입장 · 좌석 배정</div>
+    <div><span>개인 스터디 <small>평면 영상, 음원</small></span></div>
+    <div>정해진 시간 완주</div>
+    <div>VR 공연</div>
+    <div>좌석 번호와 한정판 MD</div>
+  </div>
+
+  <p class="sec">매출 · 운영</p>
+  <div class="biz">
+    <div><b>이용권</b>스터디존 이용 + 완주 시 VR 공연 관람 + 이용자 한정 포카</div>
+    <div><b>한정판 MD</b>디지털/실물, 별도 판매</div>
+  </div>
+</main>
+</body>
+</html>
